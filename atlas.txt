@@ -1,0 +1,1 @@
+'mongodb+srv://ivandeveloper:44558441@cluster0.4ixut.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
