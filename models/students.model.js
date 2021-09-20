@@ -1,17 +1,17 @@
 const {model, Schema} = require('mongoose');
 
 const studentSchema = new Schema({
-    information: {
+    informacion: {
         personal: {
-            names: {
+            nombres: {
                 type: String,
                 required: true
             },
-            surnames: {
+            apellidos: {
                 type: String,
                 required: true
             },
-            bornDate: {
+            fechaNacimiento: {
                 type: Date,
                 required: true
             },
@@ -19,59 +19,81 @@ const studentSchema = new Schema({
                 type: String,
                 required: true
             },
-            address: {
-                street: {
+            domicilio: {
+                calle: {
                     type: String,
                     required: true
                 },
-                height: {
+                altura: {
                     type: Number,
                     required: true
                 },
-                department: {
-                    floor: Number,
-                    number: Number
+                departamento: {
+                    piso: Number,
+                    numero: Number
                 },
-                city: {
+                ciudad: {
                     type: String,
                     required: true
                 },
-                province: {
+                provincia: {
                     type: String,
                     required: true
                 },
-                postalCode: {
+                codPostal: {
                     type: Number,
                     required: true
                 }
             },
-            nationality: {
+            nacionalidad: {
                 type: String,
                 required: true
             },
         },
-        contact: {
+        contacto: {
             email: {
                 type: String,
                 required: true,
             },
-            phoneNumber: {
+            numTelefono: {
                 type: Number,
                 required: true
             }
         },
-        education: {
-            highSchool: {
-                completed: {
+        educacion: {
+            secundario: {
+                completado: {
                     type: Boolean,
                     required: true
                 },
+                institucion: String,
+                ingreso: Date,
+                egreso: Date,
             },
-            degrees: {
-                university: Array,
-                tertiary: Array,
-                courses: Array
+            titulos: {
+                universitarios: Array,
+                terciarios: Array,
+                cursos: Array,
+                especializaciones: Array
             }
+        },
+        profesional: {
+            perfiles: {
+                gitHub: String,
+                linkedIn: String
+            },
+            trabajos: {
+                historial: Array,
+                referencias: Array
+            },
+            conocimientos: Array,
+            habilidades: Array,
+            idiomas: Array
+        },
+        preferencias: {
+            hobbies: Array,
+            intereses: Array,
+            aspiraciones: Array,
         }
     },
     active: Boolean

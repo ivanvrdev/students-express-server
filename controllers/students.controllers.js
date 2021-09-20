@@ -9,8 +9,8 @@ ctrlStudents.allStudents = async (req, res)=>{
 
 //POST
 ctrlStudents.newStudent = async (req, res)=>{
-    const {information} = req.body;
-    const student = new Student({information, active: true});
+    const {informacion} = req.body;
+    const student = new Student({informacion, active: true});
     await student.save()
     .then(()=>res.json({
         message: 'User created succesfully!',
